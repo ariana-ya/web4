@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменяем кириллицу на латиницу по клику</title>
+    <script type="text/javascript"></script>
+</head>
+<body>
+    <p>Паспорт выдан: УМВД по РСО-Алания</p>
+    <p>Дата выдачи: 29.01.2019</p>
+    <p>Код подразделения: 150-002</p>
+    <p>Фамилия: <span>Кулаева</span></p>
+    <p>Имя: <span>Ариана</span></p>
+    <p>Пол: жен.</p>
+    <p>Дата рождения: <span>22.12.2004</span></p>
+    <p>Место рождения: Ляпляндия</p>
+
+
+
+
+<button>Изменить язык</button>
+
+<script>
+    (function () {
+        var mas = ['Кулаева', 'Kulaeva'];
+        var mas1 = ['Ариана', 'Ariana'];
+        var n = 0;
+        var but = document.getElementsByTagName("button")[0];
+        var div = document.getElementsByTagName("span")[0];
+        var div1 = document.getElementsByTagName("span")[1];
+        but.onclick = function () {
+            div.innerHTML = mas[n % mas.length];
+            div1.innerHTML = mas1[n % mas.length];
+            n++;
+        }
+        but.click();
+    })();
+</script>
+
+
+
+</body>
+</html>
